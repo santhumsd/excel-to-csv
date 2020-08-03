@@ -10,7 +10,7 @@ const path = require("path");
 let fileExtension = require("file-extension");
 const converter = require("json-2-csv");
 const updateUserDetails = require("./updateUserDetails");
-
+const port=process.env.PORT|| 3000
 const viewPath = path.join(__dirname, "./template/views");
 const publicDirectoryPath = path.join(__dirname, "../public");
 // const csv = require("csvtojson");
@@ -233,6 +233,6 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
-app.listen("3000", function () {
-  console.log("Server running on port 3000");
+app.listen(port, function () {
+  console.log(`Server running on port ${port}`);
 });
