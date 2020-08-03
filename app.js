@@ -105,7 +105,13 @@ app.post("/sendFile", function (req, res) {
         if (err) {
           res.json(err);
         } else {
-          let jsonArray = updateUserDetails(result);
+          let jsonArray
+          try{
+            jsonArray = updateUserDetails(result);
+          }catch(e){
+            return res.status(400).send({error:"Invalid time value"})
+          }
+          
 
           // convert JSON array to CSV string
           converter.json2csv(jsonArray, (err, csv) => {

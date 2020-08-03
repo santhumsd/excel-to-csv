@@ -20,7 +20,7 @@ let updateAttributeDetails = (newjsonData, oldjsonData) => {
    oldjsonData.map(
       (object) =>{ if(object.emailAddress === obj.UM_USER_NAME){
        // let date = moment(object.createdDate).format()
-        let date=new Date(object.createdDate).toISOString();
+        let date=(object.createdDate)?new Date(object.createdDate).toISOString():new Date("1900-01-01").toISOString();
         let {firstName,lastName,emailAddress}=object
        
         let modifiedObj = [

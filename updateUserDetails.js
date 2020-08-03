@@ -14,7 +14,7 @@ let updateUserDetails = (result) => {
  // console.log(result)
   result.map((obj) => {
    // let date = moment(obj.modifiedDate).format("YYYY-MM-DD hh:mm:ss");
-    let date=new Date(obj.modifiedDate).toISOString();
+    let date=(obj.modifiedDate)?new Date(obj.modifiedDate).toISOString():new Date("1900-01-01").toISOString();
     let rString8 = randomString(8, aN);
     let rString4 = randomString(4, aN);
     let rString4_1 = randomString(4, aN);
