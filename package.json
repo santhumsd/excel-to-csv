@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev":"nodemon run app.js"
+    "dev": "nodemon run app.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,8 @@
     "moment": "^2.27.0",
     "multer": "^1.4.2",
     "xls-to-json": "^2.0.0",
-    "xlsx-to-json": "^0.3.0"
-  }
+    "xlsx-to-json": "^0.3.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
