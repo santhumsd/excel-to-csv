@@ -15,7 +15,7 @@
     "convert-csv-to-json": "0.0.15",
     "crypto": "^1.0.1",
     "csvtojson": "^2.0.10",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "file-extension": "^4.0.5",
     "hbs": "^4.1.1",
     "json-2-csv": "^3.7.6",
